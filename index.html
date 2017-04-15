@@ -336,10 +336,14 @@
         $("#picture").load(function(){
             if(isMobile()) {
                 $("#picture").remove();
-            } else {
-                $("#picture").css("visibility", 'visible');
             }
         });
+
+        $('#picture').ready(function() {
+            if(!isMobile()) {
+                $("#picture").css("visibility", 'visible');
+            }
+        }
 
     </script>            
 </body>
