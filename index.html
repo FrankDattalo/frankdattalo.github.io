@@ -37,7 +37,7 @@
             <center>
             <div class="profile-container">
                 <div style="width: 100%; overflow-x: hidden; overflow-y: hidden">
-                    <img class="profile" src="assets/images/IMG_2657.jpg" alt="" id="picture"/>
+                    <img class="profile" src="assets/images/IMG_2657.jpg" alt="" id="picture" style="display: none"/>
                 </div>
                 <h1 class="name">Frank Dattalo</h1>
                 <h3 class="tagline">Full Stack Developer</h3>
@@ -319,7 +319,6 @@
         
         $(document).ready(function(){
             if(isMobile()) {
-                $("#picture").remove();
                 $(".languages-container").remove();
                 $(".interests-container").remove();
                 $('.sidebar-wrapper').css('min-height', 0);
@@ -331,6 +330,14 @@
                     'padding': '0px',
                     'padding-bottom': '16px'
                 });
+            }
+        });
+
+        $("#picture").load(function(){
+            if(isMobile()) {
+                $("#picture").remove();
+            } else {
+                $("#picture").css("display", 'inherit');
             }
         });
 
