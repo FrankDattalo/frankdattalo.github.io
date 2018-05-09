@@ -56,6 +56,9 @@
         .award-place {
             color: #6b798c;   
         }
+        .award-right {
+            text-align: right;
+        }
     </style>
 </head> 
 
@@ -65,7 +68,7 @@
             <center>
             <div class="profile-container">
                 <div style="display: flex; justify-content: center">
-                    <div style="width: 185px; overflow-x: hidden; overflow-y: hidden; border-radius: 50%; height: 185px">
+                    <div id="img-div" style="width: 185px; overflow-x: hidden; overflow-y: hidden; border-radius: 50%; height: 185px">
                         <img class="profile" src="assets/images/9B0A0548-130C-4E21-80A1-0E7EE22E3C20.jpeg" alt="" id="picture" style="display: none; margin-bottom: 0px"/>
                     </div>
                 </div>
@@ -487,6 +490,7 @@
                 $('.profile-container').css('padding', '25px');
                 $('#education-block').css('padding-top', '0px');
                 $('body').css('padding', '5px');
+                $('#img-div').css('height: 0px');
             }
         });
 
